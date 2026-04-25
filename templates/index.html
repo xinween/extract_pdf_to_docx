@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<title>PDF提取工具（Agent兼容版）</title>
+<h2>PDF → 数据 → 文档生成</h2>
+
+{% with msgs = get_flashed_messages() %}
+    {% if msgs %}
+        <div style="color:red; background:#ffeeee; padding:10px;">
+            {% for m in msgs %}
+                <div>{{m}}</div>
+            {% endfor %}
+        </div>
+    {% endif %}
+{% endwith %}
+
+<form method=post enctype=multipart/form-data>
+    <h3>上传PDF</h3>
+    <input type=file name=pdfs multiple accept=.pdf required>
+
+    <h3>上传DOCX模板</h3>
+    <input type=file name=template accept=.docx required>
+
+    <br><br>
+    <button type=submit>处理并下载</button>
+</form>

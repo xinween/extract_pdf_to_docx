@@ -1,0 +1,9 @@
+flask
+pdfplumber
+python-docx
+paddleocr
+paddlepaddle
+opencv-python
+pdf2image
+numpy
+pillow
